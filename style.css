@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-url: url(./assets/bg.png);
+}
+
 body {
-    background: rgb(0, 1, 20);
+    background: url(./assets/background-1.svg) no-repeat top center/cover;
+    height: 100vh;
+
 }
 
 #container {
@@ -15,6 +21,8 @@ body {
     margin: 56px auto 0px;
     padding: 0 24px;
 }
+
+/* profile */
 
 #profile {
     text-align: center;
@@ -32,4 +40,26 @@ body {
     font-weight: 600;
     line-height: 24px;
     margin-top: 8px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+li{
+    text-align: center;
+    border: 1px khaki solid;
+    border-radius: 90px;
+    background: rgba(226, 226, 226, 0.041);
+}
+
+ul li a{
+    display: flex;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
 }
