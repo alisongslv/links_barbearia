@@ -5,18 +5,25 @@
 }
 
 :root {
-    --bg-url: url(./assets/bg.png);
+    --text-color: white;
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
 }
 
 body {
-    background: url(./assets/background-1.svg) no-repeat top center/cover;
+    background:#0e0e0e;
     height: 100vh;
 
 }
 
+body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+
 #container {
     width: 100%;
-    border: 1px saddlebrown solid;
     max-width: 588px;
     margin: 56px auto 0px;
     padding: 0 24px;
@@ -50,16 +57,32 @@ ul {
     padding: 24px 0;
 }
 
-li{
-    text-align: center;
-    border: 1px khaki solid;
-    border-radius: 90px;
-    background: rgba(226, 226, 226, 0.041);
-}
-
 ul li a{
     display: flex;
+
     text-decoration: none;
     font-weight: 500;
-    color: white;
+
+    padding: 16px 24px;
+    align-items: center;
+    justify-content: center;
+    
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    background: var(--surface-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition: background 0.2s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+footer {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 14px;
 }
